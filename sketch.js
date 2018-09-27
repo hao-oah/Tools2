@@ -105,7 +105,8 @@
 		// manhattan distance
 		//let d = abs( a.i - b.i ) + abs( a.j - b.j );
 		//limit to frame
-		if (d<dist(0,0,w,h)){
+		console.log(b.i)
+		if (b.i && b.j){
 			return d;
 		}
 		return 0;
@@ -194,13 +195,11 @@
 	// create canvas of viewport size
 	function setup() {
 		createCanvas(windowWidth, windowHeight);
-
 		w = (width / cols);
 		h = (height / rows);
-		if(w<h){
-			cols = cols/4;
-			rows = rows/4;
-			h = h/4;
+		if(windowWidth<windowHeight){
+			cols = cols/2;
+			rows = rows/2;
 		}
 		generateNewBoard();
 
