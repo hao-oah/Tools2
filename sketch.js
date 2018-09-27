@@ -24,7 +24,7 @@
 	var Wall = true;
 	var end_past_x;
 	var end_past_y;
-/*
+
 	function mousePressed() {
 			if(!!mouseX&!!mouseY){
 				end_past_x = Math.floor(cols*mouseX/windowWidth);
@@ -40,7 +40,7 @@
 				iter--;
 				generateNewBoard(); 
 			}
-	}*/
+	}
 
 
 	function generateNewBoard() {
@@ -200,7 +200,7 @@
 		var canvas = createCanvas(windowWidth, windowHeight);
 		w = (width / cols);
 		h = (height / rows);
-		/*canvas.mousePressed(redraw);*/
+		canvas.mousePressed(mousePressed);
 		generateNewBoard();
 
 	}
