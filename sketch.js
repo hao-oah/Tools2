@@ -27,15 +27,13 @@
 
 	if (Wall ){
 		function mousePressed() {
-			if(mouseY>0){
-				console.log(mouseX);
-				console.log(mouseY);
 				end_past_x = Math.floor(cols*mouseX/windowWidth);
 				end_past_y = Math.floor(rows*mouseY/windowHeight);
 				end = grid[end_past_x][end_past_y];
 				iter--;
+				if(end_past_y<0 && end_past_y>74)
+					end_past_y =0;
 				redraw(); 
-				}
 			}
 	}
 	else{
@@ -110,7 +108,7 @@
 		//let d = abs( a.i - b.i ) + abs( a.j - b.j );
 		//limit to frame
 		console.log(b.i)
-		if (b.i && b.j){
+		if (b.j>0){
 			return d;
 		}
 		return 0;
