@@ -38,7 +38,7 @@
 				end_past_y = Math.round(random(0, (rows - 1)));
 				end = grid[end_past_x][end_past_y];
 				iter--;
-				redraw(); 
+				generateNewBoard(); 
 			}
 	}
 
