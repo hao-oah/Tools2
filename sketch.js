@@ -104,8 +104,11 @@
 		let d = dist(a.i, a.j, b.i, b.j);
 		// manhattan distance
 		//let d = abs( a.i - b.i ) + abs( a.j - b.j );
-		
-		return d;
+		//limit to frame
+		if (d<dist(0,0,w,h)){
+			return d;
+		}
+		return 0;
 	}
 	
 	function Spot(i, j) {
@@ -194,7 +197,13 @@
 
 		w = (width / cols);
 		h = (height / rows);
+		if(w<h){
+			cols = cols/4;
+			rows = rows/4;
+			h = h/4;
+		}
 		generateNewBoard();
+
 	}
 
 	function windowResized() {
