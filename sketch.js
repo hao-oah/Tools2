@@ -25,19 +25,12 @@
 	var end_past_x;
 	var end_past_y;
 
-	if (Wall ){
-		function mousePressed() {
+	function mousePressed() {
 				end_past_x = Math.floor(cols*mouseX/windowWidth);
 				end_past_y = Math.floor(rows*mouseY/windowHeight);
 				end = grid[end_past_x][end_past_y];
 				iter--;
-				if(end_past_y<0 && end_past_y>74)
-					generateNewBoard();
 				redraw(); 
-			}
-	}
-	else{
-		;
 	}
 
 
@@ -196,9 +189,10 @@
 	
 	// create canvas of viewport size
 	function setup() {
-		createCanvas(windowWidth, windowHeight);
+		var canvas = createCanvas(windowWidth, windowHeight);
 		w = (width / cols);
 		h = (height / rows);
+		canvas.mousePressed(mousePressed);
 		generateNewBoard();
 
 	}
