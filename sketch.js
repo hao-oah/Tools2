@@ -27,11 +27,15 @@
 
 	if (Wall ){
 		function mousePressed() {
-			end_past_x = Math.floor(cols*mouseX/windowWidth);
-			end_past_y = Math.floor(rows*mouseY/windowHeight);
-			end = grid[end_past_x][end_past_y];
-			iter--;
-			redraw(); 
+			if(mouseX&&mouseY){
+				console.log(mouseX);
+				console.log(mouseY);
+				end_past_x = Math.floor(cols*mouseX/windowWidth);
+				end_past_y = Math.floor(rows*mouseY/windowHeight);
+				end = grid[end_past_x][end_past_y];
+				iter--;
+				redraw(); 
+				}
 			}
 	}
 	else{
