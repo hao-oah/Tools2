@@ -26,8 +26,7 @@
 	var end_past_y;
 
 	function mousePressed() {
-			console.log(mouseY);
-			if(mouseY&&mouseY>0&&mouseY<74){
+			if(!!mouseX&!!mouseY){
 				end_past_x = Math.floor(cols*mouseX/windowWidth);
 				end_past_y = Math.floor(rows*mouseY/windowHeight);
 				end = grid[end_past_x][end_past_y];
