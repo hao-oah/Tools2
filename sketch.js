@@ -192,7 +192,7 @@
 		var canvas = createCanvas(windowWidth, windowHeight);
 		w = (width / cols);
 		h = (height / rows);
-		canvas.mousePressed(generateNewBoard);
+		canvas.mousePressed(redraw);
 		generateNewBoard();
 
 	}
