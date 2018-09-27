@@ -110,10 +110,9 @@
 		//let d = abs( a.i - b.i ) + abs( a.j - b.j );
 		//limit to frame
 		console.log(b.i)
-		if (b.j>0){
-			return d;
-		}
-		return 0;
+		if(!b)
+			return 1;
+		return d;
 	}
 	
 	function Spot(i, j) {
