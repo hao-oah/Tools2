@@ -30,7 +30,7 @@
 				end_past_y = Math.floor(rows*mouseY/windowHeight);
 				end = grid[end_past_x][end_past_y];
 				iter--;
-				redraw(); 
+				generateNewBoard();
 	}
 
 
