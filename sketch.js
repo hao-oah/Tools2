@@ -27,7 +27,7 @@
 
 	if (Wall ){
 		function mousePressed() {
-			if(mouseX&&mouseY){
+			if(mouseY>0){
 				console.log(mouseX);
 				console.log(mouseY);
 				end_past_x = Math.floor(cols*mouseX/windowWidth);
