@@ -26,11 +26,20 @@
 	var end_past_y;
 
 	function mousePressed() {
+			if(mouseY&&mouseY>0&&mouseY<74){
 				end_past_x = Math.floor(cols*mouseX/windowWidth);
 				end_past_y = Math.floor(rows*mouseY/windowHeight);
 				end = grid[end_past_x][end_past_y];
 				iter--;
-				generateNewBoard();
+				redraw(); 
+			}
+			else{
+				end_past_x = Math.round(random(0, (cols - 1)));
+				end_past_y = Math.round(random(0, (rows - 1)));
+				end = grid[end_past_x][end_past_y];
+				iter--;
+				redraw(); 
+			}
 	}
 
 
