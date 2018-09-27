@@ -197,10 +197,6 @@
 		createCanvas(windowWidth, windowHeight);
 		w = (width / cols);
 		h = (height / rows);
-		if(windowWidth<windowHeight){
-			cols = cols/2;
-			rows = rows/2;
-		}
 		generateNewBoard();
 
 	}
@@ -276,9 +272,6 @@
 						
 						if(newPath) {
 							neighbor.h = heuristic(neighbor, end);
-							if(neighbor.h = 0)
-								generateNewBoard();
-								break;
 							neighbor.f = (0.7*neighbor.g + 1.3*neighbor.h);
 							neighbor.previous = current;
 						}
