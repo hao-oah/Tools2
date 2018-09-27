@@ -32,7 +32,7 @@
 				end = grid[end_past_x][end_past_y];
 				iter--;
 				if(end_past_y<0 && end_past_y>74)
-					end_past_y =0;
+					generateNewBoard();
 				redraw(); 
 			}
 	}
